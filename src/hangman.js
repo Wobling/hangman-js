@@ -31,7 +31,7 @@ class Hangman {
         const isCorrectGuess = this.word.includes(guessedLetter)
     
         if (isUniqueGuess && isCorrectGuess) {
-            this.guessedLetters.push(guessedLetter)
+            this.guessedLetters = [...this.guessedLetters, guessedLetter]
         } else if (isUniqueGuess) {
             this.remainingGuesses--
         }
